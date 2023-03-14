@@ -1,12 +1,7 @@
 import { Suspense } from 'react';
-
 import { Outlet } from 'react-router-dom';
-
 import { TbMovie } from 'react-icons/tb';
 import { AiOutlineHome } from 'react-icons/ai';
-
-import BackToTop from 'react-back-to-top';
-
 import { Appbar, Container, Navigation, NavItem } from './Layout.styled';
 
 export const Layout = () => {
@@ -29,24 +24,6 @@ export const Layout = () => {
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-
-      <BackToTop
-        mainStyle={{
-          width: '100%',
-          height: '100%',
-          background: 'url(...)',
-        }}
-        percentStyle={{
-          width: '100%',
-          height: '100%',
-          color: ' rgb(255, 107, 8)',
-        }}
-        animate="rotate"
-        offsetTop={20}
-        step={50}
-        percent={true}
-        visiblePercent={50}
-      />
     </>
   );
 };
